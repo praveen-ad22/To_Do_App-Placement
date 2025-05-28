@@ -16,7 +16,7 @@ const Login = () => {
         }
     }, []);
     const handleLogin = () => {
-        window.location.href = `https://to-do-app-api-swart.vercel.app/auth/google`;
+        window.location.href = `https://to-do-app-placement-1.onrender.com/auth/google`;
     };
 
     return (

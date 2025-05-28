@@ -6,7 +6,7 @@ passport.use(
   new GoogleStrategy(
     {
       callbackURL:
-        'https://to-do-app-api-swart.vercel.app/auth/google/redirect',
+        'https://to-do-app-placement-1.onrender.com/auth/google/redirect',
       clientID: process.env.CLIENT_ID,
       clientSecret: process.env.CLIENT_SECRET,
     },
