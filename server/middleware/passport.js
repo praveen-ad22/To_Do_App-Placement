@@ -5,7 +5,8 @@ const User = require('../model/User')
 passport.use(
   new googleStrategy(
     {
-      callbackURL: 'http://localhost:5000/auth/google/redirect',
+      callbackURL:
+        'https://to-do-app-api-swart.vercel.app/auth/google/redirect',
       clientID: process.env.clientID,
       clientSecret: process.env.clientSecret,
     },
