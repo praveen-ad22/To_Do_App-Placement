@@ -19,9 +19,7 @@ app.use('/auth',authRoutes)
 app.use('/tasks',verifytoken,require('./Routes/TaskRoute'))
 
 mongoose.connect(process.env.MONGO_URL).then(()=>{
-    app.listen(process.env.PORT,()=>{
-        console.log("App is listening")
-    })
+   console.log("Connected to MongoDB")
 }).catch((error)=>{
     console.log(error)
 })
