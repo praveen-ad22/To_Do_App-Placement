@@ -16,7 +16,7 @@ const googleAuth = async (req, res) => {
     { expiresIn: '1h' }
   )
 
-  res.redirect(`http://localhost:5173/?token=${accessToken}`)
+  res.redirect(`https://to-do-app-placement.vercel.app/?token=${accessToken}`)
 }
 
 module.exports = { googleAuth }
