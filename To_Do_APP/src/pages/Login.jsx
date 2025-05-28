@@ -16,7 +16,7 @@ const Login = () => {
         }
     }, []);
     const handleLogin = () => {
-        window.location.href = `http://localhost:5000/auth/google`;
+        window.location.href = `https://to-do-app-api-swart.vercel.app/auth/google`;
     };
 
     return (

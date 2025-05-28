@@ -9,7 +9,7 @@ const Dashboard = () => {
 
     const fetchTasks = async () => {
         try {
-            const res = await axios.get("http://localhost:5000/tasks", {
+            const res = await axios.get("https://to-do-app-api-swart.vercel.app/tasks", {
                 headers: { Authorization: `Bearer ${token}` },
             });
             setTasks(res.data);
@@ -23,7 +23,7 @@ const Dashboard = () => {
     };
 
     const deleteTask = async (id) => {
-        await axios.delete(`http://localhost:5000/tasks/${id}`, {
+        await axios.delete(`https://to-do-app-api-swart.vercel.app/tasks/${id}`, {
             headers: { Authorization: `Bearer ${token}` },
         });
         fetchTasks();
@@ -31,7 +31,7 @@ const Dashboard = () => {
 
     const markComplete = async (id) => {
         await axios.put(
-            `http://localhost:5000/tasks/${id}`,
+            `https://to-do-app-api-swart.vercel.app/tasks/${id}`,
             { status: true },
             { headers: { Authorization: `Bearer ${token}` } }
         );

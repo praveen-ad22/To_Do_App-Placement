@@ -11,7 +11,7 @@ const TaskForm = () => {
     useEffect(() => {
         if (id) {
             axios
-                .get(`http://localhost:5000/tasks`, {
+                .get(`https://to-do-app-api-swart.vercel.app//tasks`, {
                     headers: { Authorization: `Bearer ${token}` },
                 })
                 .then((res) => {
@@ -24,11 +24,11 @@ const TaskForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (id) {
-            await axios.put(`http://localhost:5000/tasks/${id}`, task, {
+            await axios.put(`https://to-do-app-api-swart.vercel.app/tasks/${id}`, task, {
                 headers: { Authorization: `Bearer ${token}` },
             });
         } else {
-            await axios.post("http://localhost:5000/tasks", task, {
+            await axios.post("https://to-do-app-api-swart.vercel.app/tasks", task, {
                 headers: { Authorization: `Bearer ${token}` },
             });
         }
