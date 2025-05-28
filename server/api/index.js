@@ -34,8 +34,13 @@ app.use(passport.initialize())
 
 // Routes
 app.get('/', (req, res) => {
+<<<<<<< HEAD
   res.send('To-Do App API is running');
 });
+=======
+  res.send('To-Do App API is running')
+})
+>>>>>>> 0ee0280 (modified)
 app.use('/auth', authRoutes)
 app.use('/tasks', verifyToken, taskRoutes)
 
